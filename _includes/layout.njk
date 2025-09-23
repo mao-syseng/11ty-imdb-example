@@ -15,9 +15,17 @@ title: 11ty imdb test
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <style>
       :root {
         --bg-color: #17141c;
