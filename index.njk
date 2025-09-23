@@ -1,0 +1,17 @@
+---
+title: Movies Overview
+layout: layout.njk
+permalink: "/"
+---
+
+<h1>IMDB Top 950 Movies</h1>
+
+<ul>
+  {% for movie in imdb %}
+  <li>
+    <a href="/movies/{{ movie.Title | slugify }}{{ movie.Rank }}/">
+      - {{ movie.Rank }} {{ movie.Title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

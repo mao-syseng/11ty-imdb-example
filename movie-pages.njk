@@ -1,0 +1,21 @@
+---
+pagination:
+  data: imdb
+  size: 1
+  alias: movie
+permalink: "movies/{{ movie.Title | slugify }}{{movie.Rank}}/"
+layout: layout.njk
+---
+
+<p>{{ movie.Title }}</p>
+<p>Rank: {{ movie.Rank }}</p>
+
+<br />
+<p>
+  {{ movie.Description }}
+</p>
+<br />
+<p>Director: {{ movie.Director }}</p>
+<p>Writer: {{ movie.Writers }}</p>
+<p>Stars: {{ movie.Stars }}</p>
+<p>Tags: {{ movie.Tags }}</p>
