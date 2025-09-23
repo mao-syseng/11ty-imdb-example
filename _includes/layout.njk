@@ -42,6 +42,8 @@ title: 11ty imdb test
         background-color: var(--bg-color);
         color: var(--text-color);
         margin: 32px;
+        display: flex;
+        gap: 16px;
       }
 
       li {
@@ -57,6 +59,14 @@ title: 11ty imdb test
         text-decoration: underline;
       }
 
+      aside {
+        padding-right: 16px;
+        border-right: 2px solid #a692b0;
+        flex: 1;
+      }
+      main {
+        flex: 3;
+      }
       input {
         background-color: var(--input-bg);
         color: var(--input-text);
@@ -66,6 +76,17 @@ title: 11ty imdb test
     <title>{{ title }}</title>
   </head>
   <body>
-    {{ content | safe }}
+    <aside>
+      {% for movie in imdb %}
+      <li>
+        <a href="/movies/{{ movie.Title | slugify }}{{ movie.Rank }}/">
+          {{ movie.Rank }}. {{ movie.Title }}
+        </a>
+      </li>
+      {% endfor %}
+    </aside>
+    <main>
+      {{ content | safe }}
+    </main>
   </body>
 </html>

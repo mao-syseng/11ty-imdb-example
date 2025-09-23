@@ -6,12 +6,10 @@ permalink: "/"
 
 <h1>IMDB Top 950 Movies</h1>
 
-<ul>
+<label for="input">Search</label>
+<input type="text" id="input" list="movies" />
+<datalist id="movies">
   {% for movie in imdb %}
-  <li>
-    <a href="/movies/{{ movie.Title | slugify }}{{ movie.Rank }}/">
-      - {{ movie.Rank }} {{ movie.Title }}
-    </a>
-  </li>
+  <option value="{{ movie.Title }}"></option>
   {% endfor %}
-</ul>
+</datalist>
