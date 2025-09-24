@@ -1,4 +1,5 @@
-# Static site generation for NASA's exoplanet archive
+# 11ty Static site generation with IMDB dataset
 
-https://exoplanetarchive.ipac.caltech.edu/
+
+Deployed here: https://11tyimdbtest.netlify.app/
 
