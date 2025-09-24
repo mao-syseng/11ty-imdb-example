@@ -11,18 +11,10 @@ title: 11ty imdb test
       name="description"
       content="Explore the IMDB Top 950 movies. Browse, search, and find detailed information on your favorite films, from classics to modern hits."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bytesized&family=Doto:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
     <style>
       :root {
-        --bg-color: #17141c;
-        --text-color: #a692b0;
-        --input-bg: #a692b0;
-        --input-text: #17141c;
+        --dark: #17141c;
+        --light: #a692b0;
       }
 
       body {
@@ -30,41 +22,51 @@ title: 11ty imdb test
         font-weight: 400;
         font-style: normal;
         font-size: 24px;
-        background-color: var(--bg-color);
-        color: var(--text-color);
+        background-color: var(--dark);
+        color: var(--light);
         margin: 32px;
         display: flex;
         gap: 16px;
       }
 
+      pre {
+        font-family: "Bytesized", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+      }
+
       li {
         list-style: none;
       }
-
       a {
-        color: var(--text-color);
+        color: var(--light);
         text-decoration: none;
       }
-
       a:hover {
         text-decoration: underline;
       }
-
       aside {
         padding-right: 16px;
-        border-right: 2px solid #a692b0;
+        border-right: 2px solid var(--light);
         flex: 1;
       }
       main {
         flex: 3;
       }
       input {
-        background-color: var(--input-bg);
-        color: var(--input-text);
+        background-color: var(--light);
+        color: var(--dark);
         font: inherit;
       }
     </style>
     <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bytesized&family=Doto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <aside>
